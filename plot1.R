@@ -14,7 +14,8 @@ hist(
   data$Global_active_power, 
   col = 'red', 
   main = 'Global Active Power', 
-  xlab = 'Global Active Power (kilowatts)'
+  xlab = 'Global Active Power (kilowatts)',
+  xaxp = c(0, 6, 3), #change x axis ticks
 )
 
 dev.off()
