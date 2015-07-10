@@ -59,10 +59,9 @@ legend(
 
 with(data, plot(
   unix_time, 
-  data$Voltage, 
+  Voltage, 
   xaxt = 'n', 
-  xlab = 'datetime', 
-  ylab = 'Voltage', 
+  xlab = 'datetime',
   type = 'l'
 ))
 axis(1, at=tck_locations, labels=day_labels)
@@ -71,8 +70,7 @@ with(data, plot(
   unix_time, 
   Global_reactive_power, 
   xaxt = 'n', 
-  xlab = 'datetime', 
-  #ylab = 'Voltage', 
+  xlab = 'datetime',
   type = 'l'
 ))
 axis(1, at=tck_locations, labels=day_labels)
