@@ -25,9 +25,8 @@ plot(
   ylab = 'Global Active Power (kilowatts)'
 )
 
-# 1170268200 is unixtime at start of Thursday as.numeric(as.POSIXct('1/2/2007 00:00:00', format='%d/%m/%Y %H:%M:%S'))
-# 1170354600 is unixtime at start of Firday   as.numeric(as.POSIXct('2/2/2007 00:00:00', format='%d/%m/%Y %H:%M:%S'))
-# 1170441000 is unixtime at start of Saturday as.numeric(as.POSIXct('3/2/2007 00:00:00', format='%d/%m/%Y %H:%M:%S'))
-axis(1, at=c(1170268200, 1170354600, 1170441000), labels=c('Thursday', 'Friday', 'Saturday'))
+days <- c('1/2/2007 00:00:00', '2/2/2007 00:00:00', '3/2/2007 00:00:00')
+tck_locations <- as.numeric(as.POSIXct(days, format='%d/%m/%Y %H:%M:%S'))
+axis(1, at=tck_locations, labels=c('Thursday', 'Friday', 'Saturday'))
 
 dev.off()
