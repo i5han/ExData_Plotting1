@@ -10,7 +10,8 @@ alldata <- read.delim(
 
 data <- subset(alldata, Date == '1/2/2007' | Date == '2/2/2007')
 
-# easier to plot with unix time (merge date and time character columns and convert to unix time)
+# easier to plot with unix time than to work with date and time separately
+# merge date and time character columns and convert to unix time
 unix_time <- as.numeric(as.POSIXct(with(data, paste(Date, Time)), format='%d/%m/%Y %H:%M:%S'))
 
 png(filename = 'plot2.png')
